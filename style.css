@@ -496,7 +496,7 @@ a {
 .btn_ic1 .ic:after,
 .floating_item .icon1:after,
 .icon1:after {
-  content: "";
+  content: "📞";
 }
 .btn_ic10 .ic:after,
 .floating_item .icon10:after,
@@ -526,7 +526,7 @@ a {
 .btn_ic15 .ic:after,
 .floating_item .icon15:after,
 .icon15:after {
-  content: "";
+  content: "🎁";
 }
 .btn_ic16 .ic:after,
 .floating_item .icon16:after,
@@ -1468,7 +1468,7 @@ a {
 }
 .nicon_top .ic:after,
 .nicon_top:after {
-  content: "";
+  content: "Top";
 }
 .nicon_touch1 .ic:after,
 .nicon_touch1:after {
@@ -2426,7 +2426,7 @@ a {
 }
 .floating_item .link_item .icon_top {
   overflow: hidden;
-  background-image: url(../img/sp_pc_527220.png);
+  background-image: url(./sp_pc_527220.png);
   width: 31px;
   height: 26px;
   background-position: -155px -508px;
