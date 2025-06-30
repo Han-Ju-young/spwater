@@ -9,14 +9,20 @@
     <script>
       function scaleToFit() {
         const scaler = document.getElementById("scaler");
-        const baseWidth = 1280; // 기준 너비 (PC 기준으로 디자인한 너비)
+        const baseWidth = 1440; // PC 기준 너비
         const scale = window.innerWidth / baseWidth;
 
         scaler.style.transform = `scale(${scale})`;
-        scaler.style.width = `${baseWidth}px`; // 원래 크기 유지
+        scaler.style.width = `${baseWidth}px`;
+        scaler.style.transformOrigin = "top left"; // ← 중요
       }
 
-      window.addEventListener("load", scaleToFit);
+      window.addEventListener("load", () => {
+        scaleToFit();
+        // 모바일에서 초기 적용 안되는 경우 강제 재호출
+        setTimeout(scaleToFit, 100);
+      });
+
       window.addEventListener("resize", scaleToFit);
     </script>
 
