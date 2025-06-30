@@ -1,3 +1,8 @@
+#scaler {
+  transform-origin: top left;
+  width: 100%;
+}
+
 body,
 html {
   width: 100%;
@@ -2444,6 +2449,65 @@ a {
   margin-left: 3px;
   font-size: 13px;
 }
+
+@media screen and (max-width: 767px) {
+  .floating_item {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .floating_item .link_item {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+  }
+
+  .floating_item .link_item .icon {
+    height: 48px;
+    font-size: 22px;
+    line-height: 48px;
+  }
+
+  .floating_item .link_item .text {
+    font-size: 16px;
+    line-height: 48px;
+  }
+
+  .floating_item .link_item:hover,
+  .floating_item .link_item:focus {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .floating_item {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .floating_item .link_item {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+
+  .floating_item .link_item .icon {
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .floating_item .link_item .text {
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .floating_item .link_item:hover,
+  .floating_item .link_item:focus {
+    padding: 0 12px;
+  }
+}
+
 .button_more {
   display: block;
   -webkit-box-sizing: border-box;

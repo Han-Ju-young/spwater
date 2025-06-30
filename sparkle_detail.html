@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스파클생수 춘천점</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <script>
+      function scaleToFit() {
+        const scaler = document.getElementById("scaler");
+        const baseWidth = 1280; // 기준 너비 (PC 기준으로 디자인한 너비)
+        const scale = window.innerWidth / baseWidth;
+
+        scaler.style.transform = `scale(${scale})`;
+        scaler.style.width = `${baseWidth}px`; // 원래 크기 유지
+      }
+
+      window.addEventListener("load", scaleToFit);
+      window.addEventListener("resize", scaleToFit);
+    </script>
+
     <style id="themeColor">
       .theme_border {
         border-color: #4f7ce6 !important;
@@ -44,7 +59,7 @@
   <body class="portrait" data-theme-color="#4f7ce6">
     <span id="site-name" style="display: none">스파클생수 춘천점</span>
 
-    <div id="wrap" class="wrap" data-role="page-container">
+    <div id="scaler" class="wrap" data-role="page-container">
       <div class="fc_wrap _fcWrap">
         <div class="header" id="mainHeader" role="banner">
           <div class="section_header_wrap">
@@ -277,33 +292,6 @@
             </div>
           </div>
 
-          <!-- 우측 플로팅 버튼 시작 -->
-          <ul class="floating_item _floating">
-            <li>
-              <a
-                href="tel:010-2676-7081"
-                class="link_item theme_background _btnFloating"
-                data-cid=""
-                data-type="defaultPhone"
-                data-data=""
-                data-name="전화"
-              >
-                <span class="icon icon1"></span><span class="text">전화</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="link_item top_item _btnFloating"
-                data-type="top"
-              >
-                <span class="icon icon_top"></span
-                ><span class="text blind">top</span>
-              </a>
-            </li>
-          </ul>
-          <!-- 우측 플로팅 버튼 끝 -->
-
           <div class="footer _footer" role="contentinfo">
             <div class="section_footer">
               <div class="footer_inner">
@@ -371,5 +359,26 @@
         </div>
       </div>
     </div>
+    <!-- 우측 플로팅 버튼 시작 -->
+    <ul class="floating_item _floating">
+      <li>
+        <a
+          href="tel:010-2676-7081"
+          class="link_item theme_background _btnFloating"
+          data-cid=""
+          data-type="defaultPhone"
+          data-data=""
+          data-name="전화"
+        >
+          <span class="icon icon1"></span><span class="text">전화</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="link_item top_item _btnFloating" data-type="top">
+          <span class="icon icon_top"></span><span class="text blind">top</span>
+        </a>
+      </li>
+    </ul>
+    <!-- 우측 플로팅 버튼 끝 -->
   </body>
 </html>
